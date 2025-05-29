@@ -19,7 +19,7 @@ h1 {
 
 /* Sections */
 
-main {
+.color-form {
   background-color: #10403b;
   padding: 1.25em 0;
 }
@@ -28,7 +28,7 @@ form {
   display: flex;
   justify-content: center;
   gap: 1.25em;
-  padding: 0 10px;
+  padding: 0 0.63em;
 }
 
 select,
@@ -54,4 +54,20 @@ select {
 
 button {
   background-color: #127369;
+}
+
+/* Color Blocks */
+
+.color-scheme {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 100vh;
+}
+
+.color-block-one {
+  background-color: #127369;
+}
+
+.color-block-two {
+  background-color: #9ca3af;
 }

@@ -20,20 +20,29 @@
         <h1>Color Scheme Generator</h1>
       </header>
       <main>
-        <form>
-          <input type="color" name="color" id="color" value="#ff0000" />
-          <select name="scheme-mode" id="scheme-mode">
-            <option value="onochrome">Monochrome</option>
-            <option value="monochrome-dark">Monochrome-dark</option>
-            <option value="monochrome-light">Monochrome-light</option>
-            <option value="analogic">Analogic</option>
-            <option value="complement">Complement</option>
-            <option value="analogic-complement">Analogic-complement</option>
-            <option value="triad">Triad</option>
-            <option value="quad">Quad</option>
-          </select>
-          <button>Get color scheme</button>
-        </form>
+        <section class="color-form">
+          <form>
+            <input type="color" name="color" id="color" value="#ff0000" />
+            <select name="scheme-mode" id="scheme-mode">
+              <option value="monochrome">Monochrome</option>
+              <option value="monochrome-dark">Monochrome-dark</option>
+              <option value="monochrome-light">Monochrome-light</option>
+              <option value="analogic">Analogic</option>
+              <option value="complement">Complement</option>
+              <option value="analogic-complement">Analogic-complement</option>
+              <option value="triad">Triad</option>
+              <option value="quad">Quad</option>
+            </select>
+            <button id="btn">Get color scheme</button>
+          </form>
+        </section>
+        <section class="color-scheme">
+          <div class="color-block-one"></div>
+          <div class="color-block-two"></div>
+          <div class="color-block"></div>
+          <div class="color-block"></div>
+          <div class="color-block"></div>
+        </section>
       </main>
     </div>
     <script src="index.js"></script>
