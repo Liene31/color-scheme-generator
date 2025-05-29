@@ -1,6 +1,6 @@
 let colorSchemeArr = [];
 
-// Select the color and mode & returns the values
+// Selects the color and mode & returns the values
 
 document.getElementById("btn").addEventListener("click", function (e) {
   e.preventDefault();
@@ -10,7 +10,7 @@ document.getElementById("btn").addEventListener("click", function (e) {
   fetchColors(selectedColor, sekectedSchemeMode);
 });
 
-// Fetch the color scheme from API & retunrs the Array
+// Fetch the color scheme from API & returns the Array
 
 function fetchColors(color, mode) {
   fetch(`https://www.thecolorapi.com/scheme?hex=${color}&mode=${mode}`)
@@ -18,6 +18,7 @@ function fetchColors(color, mode) {
     .then((data) => {
       colorSchemeArr = data.colors;
       renderColorScheme(colorSchemeArr);
+      renderHexValue(colorSchemeArr);
     });
 }
 
@@ -38,6 +39,21 @@ function renderColorScheme(array) {
   });
 
   document.getElementById("color-scheme").innerHTML = colorSchemeHtml;
+}
+
+// Renders the Hex names in HTML
+
+function renderHexValue(array) {
+  let hexNameHtml = "";
+
+  array.forEach(function (color) {
+    console.log(color.hex.value);
+    hexNameHtml += `
+      <div class="hex-value-code">${color.hex.value}</div>
+    `;
+  });
+
+  document.getElementById("hex-values").innerHTML = hexNameHtml;
 }
 
 // Render default colors on initial load

@@ -56,6 +56,10 @@ select {
   padding: 0.63em;
 }
 
+option {
+  background-color: #1f2937;
+}
+
 button {
   background-color: #3d4b60;
 }
