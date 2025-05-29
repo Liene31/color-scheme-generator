@@ -1,14 +1,10 @@
-const color = document.getElementById("color");
-const schemeMode = document.getElementById("scheme-mode");
-const btn = document.getElementById("btn");
-const colorScheme = document.getElementById("color-scheme");
 let colorSchemeArr = [];
 
-function renderColorScheme() {
+function renderColorScheme(array) {
+  console.log(array);
   let colorSchemeHtml = "";
 
-  colorSchemeArr.forEach((color) => {
-    console.log(color);
+  array.forEach((color) => {
     colorSchemeHtml += `
     <div class="color-block">
         <img
@@ -19,13 +15,13 @@ function renderColorScheme() {
 `;
   });
 
-  colorScheme.innerHTML = colorSchemeHtml;
+  document.getElementById("color-scheme").innerHTML = colorSchemeHtml;
 }
 
-btn.addEventListener("click", function (e) {
+document.getElementById("btn").addEventListener("click", function (e) {
   e.preventDefault();
-  const chosenColor = color.value.substring(1);
-  const chosenSchemeMode = schemeMode.value;
+  const chosenColor = document.getElementById("color").value.substring(1);
+  const chosenSchemeMode = document.getElementById("scheme-mode").value;
 
   fetch(
     `https://www.thecolorapi.com/scheme?hex=${chosenColor}&mode=${chosenSchemeMode}`
@@ -36,3 +32,5 @@ btn.addEventListener("click", function (e) {
       renderColorScheme(colorSchemeArr);
     });
 });
+
+renderColorScheme(colorSchemeArr);
