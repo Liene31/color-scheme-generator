@@ -3,26 +3,55 @@
 }
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
-  max-width: 500px;
+  max-width: 450px;
   margin: 0 auto;
 }
+
+/* Typography */
 
 h1 {
   text-align: center;
 }
 
+/* Sections */
+
+main {
+  background-color: #10403b;
+  padding: 1.25em 0;
+}
+
 form {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 1.25em;
+  padding: 0 10px;
 }
 
 select,
 button,
 input {
   border: 1px solid #9ca3af;
+  border-radius: 3px;
+  height: 35px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+input,
+select {
+  background-color: transparent;
+}
+
+button,
+select {
+  color: #bfbfbf;
+  padding: 0.63em;
+}
+
+button {
+  background-color: #127369;
 }
