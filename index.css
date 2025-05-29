@@ -3,7 +3,7 @@
 }
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -15,13 +15,16 @@ body {
 
 h1 {
   text-align: center;
+  color: #1f2937;
 }
 
 /* Sections */
 
 .color-form {
-  background-color: #10403b;
+  background-color: #1f2937;
   padding: 1.25em 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 form {
@@ -37,7 +40,7 @@ input {
   border: 1px solid #9ca3af;
   border-radius: 3px;
   height: 35px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   cursor: pointer;
 }
 
@@ -48,22 +51,36 @@ select {
 
 button,
 select {
-  color: #bfbfbf;
+  color: #ffffff;
   padding: 0.63em;
 }
 
 button {
-  background-color: #127369;
+  background-color: #3d4b60;
+}
+
+.color-scheme,
+footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 /* Color Blocks */
 
 .color-scheme {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 50vh;
 }
 
 img {
   max-width: 100%;
-  height: 100vh;
+  height: 100%;
+}
+
+footer {
+  background-color: #1f2937;
+  justify-items: center;
+  padding: 1.25em 0;
+  color: #ffffff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }

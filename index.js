@@ -24,7 +24,6 @@ function fetchColors(color, mode) {
 // Renders the color scheme in HTML
 
 function renderColorScheme(array) {
-  console.log(array);
   let colorSchemeHtml = "";
 
   array.forEach((color) => {
